@@ -1,0 +1,176 @@
+*HMGS-MINIGUI-IDE Two-Way Form Designer Generated Code
+*OPEN SOURCE PROJECT 2005-2011 Walter Formigoni http://sourceforge.net/projects/hmgs-minigui/
+
+DEFINE WINDOW TEMPLATE AT 269 , 413 WIDTH 682 HEIGHT 384 VIRTUAL WIDTH Nil VIRTUAL HEIGHT Nil TITLE "" ICON NIL MODAL NOSIZE NOSYSMENU NOCAPTION CURSOR NIL ON INIT Nil ON RELEASE Nil ON INTERACTIVECLOSE Nil ON MOUSECLICK Nil ON MOUSEDRAG Nil ON MOUSEMOVE Nil ON SIZE Nil ON PAINT Nil BACKCOLOR Nil ON GOTFOCUS WIN_ENDOFPROGRAM_ONGOTFOCUS() ON LOSTFOCUS Nil ON SCROLLUP Nil ON SCROLLDOWN Nil ON SCROLLLEFT Nil ON SCROLLRIGHT Nil ON HSCROLLBOX Nil ON VSCROLLBOX Nil
+
+    DEFINE LABEL lbl_BackGround
+        ROW    0
+        COL    0
+        WIDTH  620
+        HEIGHT 28
+        VALUE ""
+        FONTNAME fARIAL
+        FONTSIZE 10
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR { 000 , 085 , 229 }
+        FONTCOLOR NIL
+    END LABEL
+
+    DEFINE IMAGE img_APPTitle
+        ROW    2
+        COL    2
+        WIDTH  24
+        HEIGHT 24
+        PICTURE "APP_MAIN"
+        HELPID Nil
+        VISIBLE .T.
+        STRETCH .T.
+        ACTION Nil
+    END IMAGE
+
+    DEFINE LABEL lbl_APPTitle
+        ROW    2
+        COL    35
+        WIDTH  585
+        HEIGHT 24
+        VALUE ""
+        FONTNAME fARIAL
+        FONTSIZE 15
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR { 000 , 085 , 229 }
+        FONTCOLOR { 255 , 255 , 255 }
+    END LABEL
+
+    DEFINE FRAME frm_Main
+        ROW    30
+        COL    5
+        WIDTH  665
+        HEIGHT 340
+        FONTNAME fARIAL
+        FONTSIZE 10
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        CAPTION NIL
+        BACKCOLOR NIL
+        FONTCOLOR NIL
+        OPAQUE .T.
+    END FRAME
+
+    DEFINE LABEL lbl_0
+        ROW    50
+        COL    10
+        WIDTH  655
+        HEIGHT 80
+        VALUE ""
+        FONTNAME fARIAL
+        FONTSIZE 24
+        TOOLTIP ""
+        FONTBOLD .T.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR NIL
+        FONTCOLOR NIL
+        CENTERALIGN .T.
+    END LABEL
+
+    DEFINE LABEL lbl_1
+        ROW    140
+        COL    10
+        WIDTH  655
+        HEIGHT 80
+        VALUE "Zakoñczyæ pracê programu?"
+        FONTNAME fARIAL
+        FONTSIZE 24
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR NIL
+        FONTCOLOR NIL
+        CENTERALIGN .T.
+    END LABEL
+
+    DEFINE BUTTON btn_YES
+        ROW    260
+        COL    100
+        WIDTH  150
+        HEIGHT 50
+        ACTION Nil
+        CAPTION "TAK"
+        FONTNAME fARIAL
+        FONTSIZE 12
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        ONGOTFOCUS Nil
+        ONLOSTFOCUS Nil
+        HELPID Nil
+        FLAT .F.
+        TABSTOP .T.
+        VISIBLE .T.
+        TRANSPARENT .F.
+        MULTILINE .F.
+        PICTURE Nil
+    END BUTTON
+
+    DEFINE BUTTON btn_NOT
+        ROW    260
+        COL    420
+        WIDTH  150
+        HEIGHT 50
+        ACTION Nil
+        CAPTION "NIE"
+        FONTNAME fARIAL
+        FONTSIZE 12
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        ONGOTFOCUS Nil
+        ONLOSTFOCUS Nil
+        HELPID Nil
+        FLAT .F.
+        TABSTOP .T.
+        VISIBLE .T.
+        TRANSPARENT .F.
+        MULTILINE .F.
+        PICTURE Nil
+    END BUTTON
+
+END WINDOW
+
