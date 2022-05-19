@@ -1,0 +1,13 @@
+// HMG Official -> _HMG_3_    <-------
+// HMG Extended -> _HMG_2_
+// HMG 4        -> _HMG_4_
+// MARINAS_GUI  -> _MAR_
+// XAILER       -> _XAR_
+// xHarbour.com -> _HMG_COM_
+// FiveWin      -> _FIW_
+//
+// TEST -> __TEST__
+// LOG  -> __LOG__
+//
+
+#DEFINE  _HMG_3_

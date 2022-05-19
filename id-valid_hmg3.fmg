@@ -1,0 +1,248 @@
+* HMG-IDE ANSI Form Designer Generated Code
+* (c) Roberto Lopez - http://sites.google.com/site/hmgweb
+
+DEFINE WINDOW TEMPLATE AT 0 , 0 WIDTH 1536 HEIGHT 824 VIRTUAL WIDTH Nil VIRTUAL HEIGHT Nil TITLE "" ICON "MAINICON"  NOMAXIMIZE NOMINIMIZE NOSIZE NOSYSMENU NOCAPTION CURSOR NIL ON INIT WIN_MAIN_ONINIT() ON RELEASE Nil ON INTERACTIVECLOSE Nil ON MOUSECLICK MOVEACTIVEWINDOW( , THIS.NAME ) ON MOUSEDRAG Nil ON MOUSEMOVE Nil ON SIZE Nil ON MAXIMIZE Nil ON MINIMIZE Nil ON PAINT WIN_MAIN_ONPAINT() BACKCOLOR { 000 , 085 , 229 } NOTIFYICON NIL NOTIFYTOOLTIP NIL ON NOTIFYCLICK Nil ON GOTFOCUS MOVEACTIVEWINDOW( , THIS.NAME ) ON LOSTFOCUS Nil ON SCROLLUP Nil ON SCROLLDOWN Nil ON SCROLLLEFT Nil ON SCROLLRIGHT Nil ON HSCROLLBOX Nil ON VSCROLLBOX Nil
+
+    DEFINE LABEL lbl_BackGround
+        ROW    34
+        COL    0
+        WIDTH  1
+        HEIGHT 1
+        VALUE ""
+        FONTNAME fARIAL
+        FONTSIZE 10
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR { 000 , 085 , 229 }
+        FONTCOLOR NIL
+    END LABEL
+
+/* See: Show_TitleBar()
+    DEFINE IMAGE img_APPTitle
+        ROW    2
+        COL    2
+        WIDTH  32
+        HEIGHT 32
+        PICTURE "APP_MAIN"
+        HELPID Nil
+        VISIBLE .T.
+        STRETCH .T.
+        ACTION Nil
+    END IMAGE
+*/
+/* See: Show_TitleBar()
+    DEFINE LABEL lbl_APPTitle
+        ROW    2
+        COL    45
+        WIDTH  585
+        HEIGHT 32
+        VALUE "id-valid"
+        FONTNAME fARIAL
+        FONTSIZE 20
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR { 000 , 085 , 229 }
+        FONTCOLOR { 255 , 255 , 255 }
+    END LABEL
+*/
+/* See: Show_TitleBar()
+    DEFINE LABEL lbl_Counter
+        ROW    2
+        COL    540
+        WIDTH  170
+        HEIGHT 32
+        VALUE ""
+        FONTNAME fCOURIER
+        FONTSIZE 20
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR { 000 , 085 , 229 }
+        FONTCOLOR { 000 , 000 , 000 }
+    END LABEL
+
+*/
+
+    DEFINE BUTTON btn_About
+        ROW    2
+        COL    1435
+        WIDTH  32
+        HEIGHT 32
+        ACTION win_Main_btn_About_Action()
+        CAPTION Nil
+        FONTNAME fARIAL
+        FONTSIZE 10
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        ONGOTFOCUS Nil
+        ONLOSTFOCUS Nil
+        HELPID Nil
+        FLAT .F.
+        TABSTOP .T.
+        VISIBLE .T.
+        TRANSPARENT .F.
+        MULTILINE .F.
+        PICTURE "APP_INFO_20"
+        PICTALIGNMENT TOP
+    END BUTTON
+
+    DEFINE BUTTON btn_MinPR
+        ROW    2
+        COL    1470
+        WIDTH  32
+        HEIGHT 32
+        ACTION win_Main_btn_MinPR()
+        CAPTION Nil
+        FONTNAME fARIAL
+        FONTSIZE 10
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        ONGOTFOCUS Nil
+        ONLOSTFOCUS Nil
+        HELPID Nil
+        FLAT .F.
+        TABSTOP .T.
+        VISIBLE .T.
+        TRANSPARENT .F.
+        MULTILINE .F.
+        PICTURE "APP_MINI_20"
+        PICTALIGNMENT TOP
+    END BUTTON
+
+    DEFINE BUTTON btn_ExitPR
+        ROW    2
+        COL    1505
+        WIDTH  32
+        HEIGHT 32
+        ACTION win_Main_btn_ExitPR()
+        CAPTION Nil
+        FONTNAME fARIAL
+        FONTSIZE 10
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        ONGOTFOCUS Nil
+        ONLOSTFOCUS Nil
+        HELPID Nil
+        FLAT .F.
+        TABSTOP .T.
+        VISIBLE .T.
+        TRANSPARENT .F.
+        MULTILINE .F.
+        PICTURE "APP_EXIT_20"
+        PICTALIGNMENT TOP
+    END BUTTON
+
+    DEFINE TEXTBOX txb_Id
+        ROW    180
+        COL    518
+        WIDTH  500
+        HEIGHT 80
+        FONTNAME "fTAHOMA"
+        FONTSIZE 46
+        TOOLTIP ""
+        ONCHANGE win_main_txb_Id_OnChange()
+        ONGOTFOCUS Nil
+        ONLOSTFOCUS Nil
+        FONTBOLD .T.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        ONENTER Nil
+        HELPID Nil
+        TABSTOP .T.
+        VISIBLE .T.
+        READONLY .F.
+        RIGHTALIGN .F.
+        DISABLEDBACKCOLOR Nil
+        DISABLEDFONTCOLOR Nil
+        CASECONVERT NONE
+        BACKCOLOR NIL
+        FONTCOLOR NIL
+        INPUTMASK Nil
+        FORMAT Nil
+        VALUE "SPACE(11)"
+    END TEXTBOX
+
+    DEFINE BUTTON btn_Clear
+        ROW    180
+        COL    1018
+        WIDTH  35
+        HEIGHT 35
+        ACTION win_Main_btn_Clear_Action()
+        CAPTION "X"
+        FONTNAME "fTAHOMA"
+        FONTSIZE 24
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        ONGOTFOCUS Nil
+        ONLOSTFOCUS Nil
+        HELPID Nil
+        FLAT .F.
+        TABSTOP .T.
+        VISIBLE .T.
+        TRANSPARENT .F.
+        MULTILINE .F.
+        PICTURE Nil
+        PICTALIGNMENT TOP
+    END BUTTON
+
+    DEFINE LABEL lbl_TrueFalse
+        ROW    280
+        COL    518
+        WIDTH  500
+        HEIGHT 60
+        VALUE ""
+        FONTNAME "fTAHOMA"
+        FONTSIZE 32
+        TOOLTIP ""
+        FONTBOLD .F.
+        FONTITALIC .F.
+        FONTUNDERLINE .F.
+        FONTSTRIKEOUT .F.
+        HELPID Nil
+        VISIBLE .T.
+        TRANSPARENT .F.
+        ACTION Nil
+        AUTOSIZE .F.
+        BACKCOLOR { 255 , 255 , 255 }
+        FONTCOLOR { 000 , 170 , 000 }
+        CENTERALIGN .T. 
+    END LABEL
+
+END WINDOW
+

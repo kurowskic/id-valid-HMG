@@ -1,0 +1,10 @@
+id-valid_hmg.prg
+PESEL_Check.prg
+About.prg
+AutoAdjustControls.prg
+ctklib.prg
+EndOfProgram.prg
+MoveActiveWindow.prg
+Show_TitleBar_HMG.prg
+CenterMainWindow.prg
+CenterModalWindow.prg

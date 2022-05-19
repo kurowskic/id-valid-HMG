@@ -1,0 +1,141 @@
+*HMGS-MINIGUI-IDE Two-Way Form Designer Generated Code
+*OPEN SOURCE PROJECT 2005-2011 Walter Formigoni http://sourceforge.net/projects/hmgs-minigui/
+
+DEFINE WINDOW TEMPLATE AT 0 , 0 WIDTH 1536 HEIGHT 824 ICON 'MAINICON' MAIN NOSIZE NOSYSMENU ON INIT WIN_MAIN_ONINIT( ) BACKCOLOR { 000 , 085 , 229 } ON MOUSECLICK MOVEACTIVEWINDOW( , THIS.NAME ) ON RESTORE MOVEACTIVEWINDOW( , THIS.NAME ) ON GOTFOCUS MOVEACTIVEWINDOW( , THIS.NAME )
+
+     DEFINE LABEL lbl_BackGround
+            ROW    2
+            COL    0
+            WIDTH  725
+            HEIGHT 32
+            VALUE ""
+            FONTNAME fARIAL
+            FONTSIZE 10
+            BACKCOLOR { 000 , 085 , 229 }
+     END LABEL
+
+     DEFINE IMAGE img_APPTitle
+            ROW    2
+            COL    2
+            WIDTH  32
+            HEIGHT 32
+            PICTURE "APP_MAIN"
+            STRETCH .T.
+     END IMAGE
+
+     DEFINE LABEL lbl_APPTitle
+            ROW    2
+            COL    45
+            WIDTH  585
+            HEIGHT 32
+            VALUE "id-valid"
+            FONTNAME fARIAL
+            FONTSIZE 20
+            BACKCOLOR { 000 , 085 , 229 }
+            FONTCOLOR { 255 , 255 , 255 }
+            VCENTERALIGN .T.
+            ACTION MoveActiveWindow( , "win_Main" )
+     END LABEL
+
+     DEFINE LABEL lbl_Counter
+            ROW    2
+            COL    540
+            WIDTH  170
+            HEIGHT 32
+            VALUE ""
+            FONTNAME fCOURIER
+            FONTSIZE 20
+            BACKCOLOR { 000 , 085 , 229 }
+            FONTCOLOR { 000 , 000 , 000 }
+            VCENTERALIGN .T.
+            RIGHTALIGN .F.
+            ACTION MoveActiveWindow( , "win_Main" )
+     END LABEL
+
+
+     DEFINE BUTTON btn_About
+            ROW    2
+            COL    1435
+            WIDTH  32
+            HEIGHT 32
+            CAPTION ""
+            FONTNAME fARIAL
+            FONTSIZE 10
+            PICTURE ""
+            ACTION win_Main_btn_About_Action()
+     END BUTTON
+
+     DEFINE BUTTON btn_MinPR
+            ROW    2
+            COL    1470
+            WIDTH  32
+            HEIGHT 32
+            CAPTION ""
+            FONTNAME fARIAL
+            FONTSIZE 10
+            PICTURE ""
+     END BUTTON
+
+     DEFINE BUTTON btn_ExitPR
+            ROW    2
+            COL    1505
+            WIDTH  32
+            HEIGHT 32
+            CAPTION ""
+            FONTNAME fARIAL
+            FONTSIZE 10
+            PICTURE ""
+     END BUTTON
+
+     DEFINE TEXTBOX txb_Id
+            ROW    180
+            COL    518
+            WIDTH  500
+            HEIGHT 80
+            VALUE SPACE(11)
+            FONTNAME fTAHOMA
+            FONTSIZE 46
+            FONTBOLD .T.
+            ON CHANGE win_Main_txb_ID_OnChange()
+            RIGHTALIGN .F.
+     END TEXTBOX
+
+     DEFINE BUTTON btn_Clear
+            ROW    180
+            COL    1018
+            WIDTH  35
+            HEIGHT 35
+            CAPTION "X"
+            FONTNAME fTAHOMA
+            FONTSIZE 24
+            BACKCOLOR { 255 , 255 , 255 }
+            FONTCOLOR { 000 , 170 , 000 }
+            ACTION win_Main_btn_Clear_Action()
+            ONMOUSEHOVER Nil
+            ONMOUSELEAVE Nil
+            CENTERALIGN .T.
+            VCENTERALIGN .T.
+            BORDER .T.
+     END BUTTON
+
+     DEFINE LABEL lbl_TrueFalse
+            ROW    280
+            COL    518
+            WIDTH  500
+            HEIGHT 60
+            VALUE ""
+            FONTNAME fTAHOMA
+            FONTSIZE 32
+            BACKCOLOR { 255 , 255 , 255 }
+            FONTCOLOR { 000 , 170 , 000 }
+            ACTION Nil
+            ONMOUSEHOVER Nil
+            ONMOUSELEAVE Nil
+            CENTERALIGN .T.
+            VCENTERALIGN .T.
+            BORDER .T.
+     END LABEL
+
+
+END WINDOW
+

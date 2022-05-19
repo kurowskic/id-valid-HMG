@@ -1,0 +1,12 @@
+del *.log
+del _temp.o
+del *.rc
+del *.obj
+del *.c
+del *.res
+del *.rsp
+del _hmg_resconfig.h
+del errorlog.htm
+del id-valid_ver.ch
+del id-valid_hmg.exe
+del id-valid.exe
