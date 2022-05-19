@@ -55,7 +55,7 @@ DEFINE WINDOW TEMPLATE AT 0 , 0 WIDTH 1536 HEIGHT 824 ICON 'MAINICON' MAIN NOSIZ
 
      DEFINE BUTTON btn_About
             ROW    2
-            COL    1365 + 35 + 35
+            COL    1435
             WIDTH  32
             HEIGHT 32
             CAPTION ""
@@ -67,7 +67,7 @@ DEFINE WINDOW TEMPLATE AT 0 , 0 WIDTH 1536 HEIGHT 824 ICON 'MAINICON' MAIN NOSIZ
 
      DEFINE BUTTON btn_MinPR
             ROW    2
-            COL    1435 + 35
+            COL    1470
             WIDTH  32
             HEIGHT 32
             CAPTION ""
@@ -117,7 +117,6 @@ DEFINE WINDOW TEMPLATE AT 0 , 0 WIDTH 1536 HEIGHT 824 ICON 'MAINICON' MAIN NOSIZ
             VCENTERALIGN .T.
             BORDER .T.
      END BUTTON
-
 
      DEFINE LABEL lbl_TrueFalse
             ROW    280

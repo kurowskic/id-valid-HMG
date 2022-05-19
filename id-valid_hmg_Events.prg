@@ -23,10 +23,15 @@ PROCEDURE win_main_OnInit()
   win_Main.txb_Id.SetFocus
   win_Main.txb_Id.Value := ''
   win_Main.txb_Id.CaretPos := 0
+
+
 #IFDEF _HMG_2_
- 
+
  win_Main.txb_Id.Refresh
+
 #ENDIF
+
+
   DO_Events()
 
 RETURN
@@ -64,10 +69,14 @@ PROCEDURE win_main_txb_Id_OnChange()
   nCaretPos := win_Main.txb_Id.CaretPos
   nLastKey  := ASC( SUBSTR( cPESEL , nPos , 1 ) )
 
+
 #IFDEF _HMG_2_
+
   win_Main.lbl_TrueFalse.Value := ' '
   win_Main.lbl_TrueFalse.Refresh
- #ENDIF
+
+#ENDIF
+
 
   DO_Events()
 
@@ -102,6 +111,10 @@ PROCEDURE win_main_txb_Id_OnChange()
 
       END CASE
 
+    ELSE
+
+	   win_Main.lbl_TrueFalse.Value := ''
+
     ENDIF
 
 
@@ -112,9 +125,11 @@ PROCEDURE win_main_txb_Id_OnChange()
     DO_Events()
 
     win_Main.txb_Id.CaretPos := nCaretPos - 1
+
     DO_Events()
 
   ENDIF
+
 
 #IFDEF _HMG_2_
 
@@ -123,10 +138,12 @@ PROCEDURE win_main_txb_Id_OnChange()
 
 #ENDIF
 
+
   DO_Events()
 
 RETURN
 *-----------------------------------------------------------------------------*
+
 
 *-----------------------------------------------------------------------------*
 FUNCTION isDayOfMonthCorrect( xcPESEL )
@@ -144,33 +161,33 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
   DO CASE
 
     CASE VAL( SUBSTR( cPESEL , 3 , 2 ) ) == 82
-                                                                     // '01'
-      isLeap := ISLEAP( STOD( '18' + SUBSTR( cPESEL , 1 , 2 ) + '0201' ) )  
+
+      isLeap := ISLEAP( STOD( '18' + SUBSTR( cPESEL , 1 , 2 ) + '0201' ) )
 
 
     CASE VAL( SUBSTR( cPESEL , 3 , 2 ) ) == 02
 
-      isLeap := ISLEAP( STOD( '19' + SUBSTR( cPESEL , 1 , 2 ) + '0201' ) )  
+      isLeap := ISLEAP( STOD( '19' + SUBSTR( cPESEL , 1 , 2 ) + '0201' ) )
 
 
     CASE VAL( SUBSTR( cPESEL , 3 , 2 ) ) == 22
 
-      isLeap := ISLEAP( STOD( '20' + SUBSTR( cPESEL , 1 , 2 ) + '0201' ) )  
+      isLeap := ISLEAP( STOD( '20' + SUBSTR( cPESEL , 1 , 2 ) + '0201' ) )
 
 
     CASE VAL( SUBSTR( cPESEL , 3 , 2 ) ) == 42
 
-      isLeap := ISLEAP( STOD( '21' + SUBSTR( cPESEL , 1 , 2 ) + '0201' ) )  
+      isLeap := ISLEAP( STOD( '21' + SUBSTR( cPESEL , 1 , 2 ) + '0201' ) )
 
     CASE VAL( SUBSTR( cPESEL , 3 , 2 ) ) == 62
 
-      isLeap := ISLEAP( STOD( '22' + SUBSTR( cPESEL , 1 , 2 ) + '0201' ) )  
+      isLeap := ISLEAP( STOD( '22' + SUBSTR( cPESEL , 1 , 2 ) + '0201' ) )
 
   END CASE
 
 
   IF LEN( cPESEL ) > 4
-  
+
     DO CASE
 
       CASE isLeap == .F. .AND. (;
@@ -184,7 +201,7 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
         .OR. ;
         VAL( SUBSTR( cPESEL , 3 , 2 ) ) == 62;
         )
-		
+
           isDayOfMonthCorrect := TRUE
 		  is28Feb := TRUE
 
@@ -199,9 +216,9 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
         VAL( SUBSTR( cPESEL , 3 , 2 ) ) == 42;
         .OR. ;
         VAL( SUBSTR( cPESEL , 3 , 2 ) ) == 62;
-        )		
+        )
 
-          isDayOfMonthCorrect := TRUE  
+          isDayOfMonthCorrect := TRUE
 		  is29Feb := TRUE
 
 
@@ -276,7 +293,7 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
         .OR. ;
         VAL( SUBSTR( cPESEL , 3 , 2 ) ) == 72;
         )
-		
+
           isDayOfMonthCorrect := TRUE
 		  is31month := TRUE
 
@@ -322,13 +339,13 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
         .OR. ;
         VAL( SUBSTR( cPESEL , 3 , 2 ) ) == 71;
         )
-		
+
           isDayOfMonthCorrect := TRUE
           is30month := TRUE
 
     END CASE
 
-  
+
   ELSE
 
     isDayOfMonthCorrect := TRUE
@@ -344,13 +361,13 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
     DO CASE
 
       CASE is28Feb == TRUE;
-        .AND. ;		
+        .AND. ;
         ( VAL( SUBSTR( cPESEL , 5 , 1 ) ) >= 1;
           .AND.;
           VAL( SUBSTR( cPESEL , 5 , 1 ) ) <= 2 )
 
           isDayOfMonthCorrect := TRUE
-		  	
+
 
       CASE is29Feb == TRUE;
         .AND. ;
@@ -359,7 +376,7 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
           VAL( SUBSTR( cPESEL , 5 , 1 ) ) <= 2 )
 
           isDayOfMonthCorrect := TRUE
-		  	
+
 
       CASE is30month == TRUE;
         .AND. ;
@@ -368,8 +385,8 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
           VAL( SUBSTR( cPESEL , 5 , 1 ) ) <= 3 )
 
           isDayOfMonthCorrect := TRUE
-		  	
- 
+
+
       CASE is31month == TRUE;
         .AND. ;
         ( VAL( SUBSTR( cPESEL , 5 , 1 ) ) >= 1;
@@ -377,15 +394,15 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
           VAL( SUBSTR( cPESEL , 5 , 1 ) ) <= 3 )
 
           isDayOfMonthCorrect := TRUE
-		  	 
- 
+
+
     END CASE
 
   ENDIF
 
 
   IF LEN( cPESEL ) == 6
-  
+
     isDayOfMonthCorrect := FALSE
 
 
@@ -398,7 +415,7 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
           VAL( SUBSTR( cPESEL , 5 , 2 ) ) <= 28 )
 
           isDayOfMonthCorrect := TRUE
-		  	
+
 
       CASE is29Feb == TRUE;
         .AND. ;
@@ -407,7 +424,7 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
           VAL( SUBSTR( cPESEL , 5 , 2 ) ) <= 29 )
 
           isDayOfMonthCorrect := TRUE
-		  	
+
 
       CASE is30month == TRUE;
         .AND. ;
@@ -416,8 +433,8 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
           VAL( SUBSTR( cPESEL , 5 , 2 ) ) <= 30 )
 
           isDayOfMonthCorrect := TRUE
-		  	
- 
+
+
       CASE is31month == TRUE;
         .AND. ;
         ( VAL( SUBSTR( cPESEL , 5 , 2 ) ) >= 1;
@@ -425,8 +442,8 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
           VAL( SUBSTR( cPESEL , 5 , 2 ) ) <= 31 )
 
           isDayOfMonthCorrect := TRUE
-		  	
- 
+
+
     END CASE
 
 
@@ -547,7 +564,14 @@ PROCEDURE win_Main_btn_Clear_Action()
   win_Main.txb_Id.SetFocus
   win_Main.txb_Id.Value := ''
   win_Main.txb_Id.CaretPos := 0
+
+
+#IFDEF _HMG_2_
+
   win_Main.txb_Id.Refresh
+
+#ENDIF
+
 
   DO_Events()
 
