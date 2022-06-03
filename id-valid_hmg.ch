@@ -84,15 +84,6 @@
 #define LF CHR( 10 )
 
 
-#IFDEF _HMG_2_
-
-  #define HTCAPTION             2
-  #define WM_NCLBUTTONDOWN    161
-
-  #define EM_SETCUEBANNER  0x1501
-
-#ENDIF
-
 #DEFINE VIEW_RECORDS 5
 
 #ifndef __XHARBOUR__

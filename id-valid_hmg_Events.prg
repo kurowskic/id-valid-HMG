@@ -188,6 +188,7 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
 
   IF LEN( cPESEL ) > 4
 
+
     DO CASE
 
       CASE isLeap == .F. .AND. (;
