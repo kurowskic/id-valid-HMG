@@ -107,7 +107,7 @@ RETURN
 
 #IFDEF _HMG_2_
 //*****************************************************************************************
-//* borrowed from [MiniGUI]\samples\advanced\FitToDesktop\FitToDesktop.prg
+// [MiniGUI]\samples\advanced\FitToDesktop\FitToDesktop.prg
 //*****************************************************************************************
 
 #pragma BEGINDUMP

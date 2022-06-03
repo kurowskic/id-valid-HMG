@@ -61,31 +61,6 @@ DEFINE WINDOW TEMPLATE AT 0 , 0 WIDTH 1536 HEIGHT 824 VIRTUAL WIDTH Nil VIRTUAL 
         FONTCOLOR { 255 , 255 , 255 }
     END LABEL
 */
-/* See: Show_TitleBar()
-    DEFINE LABEL lbl_Counter
-        ROW    2
-        COL    540
-        WIDTH  170
-        HEIGHT 32
-        VALUE ""
-        FONTNAME fCOURIER
-        FONTSIZE 20
-        TOOLTIP ""
-        FONTBOLD .F.
-        FONTITALIC .F.
-        FONTUNDERLINE .F.
-        FONTSTRIKEOUT .F.
-        HELPID Nil
-        VISIBLE .T.
-        TRANSPARENT .F.
-        ACTION Nil
-        AUTOSIZE .F.
-        BACKCOLOR { 000 , 085 , 229 }
-        FONTCOLOR { 000 , 000 , 000 }
-    END LABEL
-
-*/
-
     DEFINE BUTTON btn_About
         ROW    2
         COL    1435
@@ -245,4 +220,3 @@ DEFINE WINDOW TEMPLATE AT 0 , 0 WIDTH 1536 HEIGHT 824 VIRTUAL WIDTH Nil VIRTUAL 
     END LABEL
 
 END WINDOW
-

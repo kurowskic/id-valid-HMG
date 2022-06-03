@@ -27,7 +27,7 @@ PROCEDURE win_main_OnInit()
 
 #IFDEF _HMG_2_
 
- win_Main.txb_Id.Refresh
+  win_Main.txb_Id.Refresh
 
 #ENDIF
 
@@ -187,6 +187,7 @@ FUNCTION isDayOfMonthCorrect( xcPESEL )
 
 
   IF LEN( cPESEL ) > 4
+
 
     DO CASE
 
