@@ -209,7 +209,6 @@ PROCEDURE Main()
 #ENDIF
 
 
-
     DO CASE
 
       CASE GetDesktopRealHeight() == GetProperty( "win_Main" , "Height" ) ;
