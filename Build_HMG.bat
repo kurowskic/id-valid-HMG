@@ -12,7 +12,7 @@ call %~d0\hmg.3.4.4\build.bat /n id-valid_hmg.hbp id-valid_hmg.hbc
 IF NOT EXIST id-valid_hmg.exe goto :END
 IF NOT EXIST %~d0\upx-win32\upx.exe goto :END
 
-IF EXIST %~d0\upx-win32\upx.exe c:\upx-win32\upx.exe -9 -q id-valid_hmg.exe -o id-valid.exe
+IF EXIST %~d0\upx-win32\upx.exe %~d0\upx-win32\upx.exe -9 -q id-valid_hmg.exe -o id-valid.exe
 
 IF EXIST id-valid.exe DEL id-valid_hmg.exe
 
