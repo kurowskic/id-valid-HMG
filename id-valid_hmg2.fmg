@@ -37,22 +37,6 @@ DEFINE WINDOW TEMPLATE AT 0 , 0 WIDTH 1536 HEIGHT 824 ICON 'MAINICON' MAIN NOSIZ
             ACTION MoveActiveWindow( , "win_Main" )
      END LABEL
 
-     DEFINE LABEL lbl_Counter
-            ROW    2
-            COL    540
-            WIDTH  170
-            HEIGHT 32
-            VALUE ""
-            FONTNAME fCOURIER
-            FONTSIZE 20
-            BACKCOLOR { 000 , 085 , 229 }
-            FONTCOLOR { 000 , 000 , 000 }
-            VCENTERALIGN .T.
-            RIGHTALIGN .F.
-            ACTION MoveActiveWindow( , "win_Main" )
-     END LABEL
-
-
      DEFINE BUTTON btn_About
             ROW    2
             COL    1435
@@ -136,6 +120,4 @@ DEFINE WINDOW TEMPLATE AT 0 , 0 WIDTH 1536 HEIGHT 824 ICON 'MAINICON' MAIN NOSIZ
             BORDER .T.
      END LABEL
 
-
 END WINDOW
-

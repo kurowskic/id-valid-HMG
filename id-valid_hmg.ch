@@ -2,32 +2,27 @@
 #include "id-valid_ver.ch"
 *-----------------------------------------------------------------------------*
 
-#DEFINE  _PRG1_      '0'
-#DEFINE  _PRG2_      '01'
-#DEFINE  _PRG3_      '000'
+#DEFINE  _PRG1_      '2022'
+#DEFINE  _PRG2_      '154'
+#DEFINE  _PRG3_      '2'
 
-#DEFINE  _PRG4_      '001'
-
-
-#DEFINE  _DB1_       '0'
+#DEFINE  _DB1_       '0000'
 #DEFINE  _DB2_       '00'
-#DEFINE  _DB3_       '000'
+#DEFINE  _DB3_       '0'
 
 
-#DEFINE  _OLD_PRG1_  '0'
+#DEFINE  _OLD_PRG1_  '0000'
 #DEFINE  _OLD_PRG2_  '00'
-#DEFINE  _OLD_PRG3_  '000'
+#DEFINE  _OLD_PRG3_  '0'
 
-#DEFINE  _OLD_PRG4_  '000'
-
-#DEFINE  _OLD_DB1_   '0'
+#DEFINE  _OLD_DB1_   '0000'
 #DEFINE  _OLD_DB2_   '00'
-#DEFINE  _OLD_DB3_   '000'
+#DEFINE  _OLD_DB3_   '0'
 
 
 #DEFINE NAZWA_PR     "id-valid"
 
-#DEFINE WERSJA_PR    _PRG1_+"."+_PRG2_+"."+_PRG3_ // +"."+_PRG4_
+#DEFINE WERSJA_PR    _PRG1_+"."+_PRG2_+"."+_PRG3_
 #DEFINE WERSJA_DB    _DB1_+"."+_DB2_+"."+_DB3_
 
 
@@ -83,15 +78,6 @@
 #define CR CHR( 13 )
 #define LF CHR( 10 )
 
-
-#IFDEF _HMG_2_
-
-  #define HTCAPTION             2
-  #define WM_NCLBUTTONDOWN    161
-
-  #define EM_SETCUEBANNER  0x1501
-
-#ENDIF
 
 #DEFINE VIEW_RECORDS 5
 
