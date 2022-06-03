@@ -9,8 +9,8 @@ APP_MINI_20         BITMAP "resource\app_mini_20.bmp"
 APP_EXIT_20         BITMAP "resource\app_exit_20.bmp"
 
 1 VERSIONINFO
-FILEVERSION 0,1,0,0
-PRODUCTVERSION 0,1,0,0
+FILEVERSION 2022,158,1,0
+PRODUCTVERSION 2022,158,1,0
 FILEOS 0x4
 FILETYPE 0x1
 {
@@ -19,14 +19,14 @@ FILETYPE 0x1
     BLOCK "041504b0"
     {
       VALUE "FileDescription" , "id-valid\000"
-      VALUE "FileVersion"     , "0.01.000\000"
+      VALUE "FileVersion"     , "2022.158.1\000"
       VALUE "InternalName"    , "id-valid\000"
       VALUE "LegalCopyright"  , "LC\000"
       VALUE "LegalTrademarks" , "LT\000"
       VALUE "OriginalFilename", "id-valid_hmg.exe\000"
       VALUE "CompanyName"     , "CN\000"
       VALUE "ProductName"     , "id-valid\000"
-      VALUE "ProductVersion"  , "0.01.000\000"
+      VALUE "ProductVersion"  , "2022.158.1\000"
       VALUE "Comments"        , "Comments\000"
     }
   }

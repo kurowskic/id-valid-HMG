@@ -1,4 +1,4 @@
-if "%MG_ROOT%"=="" set MG_ROOT=c:\minigui
+if "%MG_ROOT%"=="" set MG_ROOT=%~d0\minigui
 
 title id-valid_hmg
 
@@ -34,9 +34,9 @@ call %MG_ROOT%\batch\compile.bat CenterMainWindow      /do %1 %2 %3 %4 %5 %6 %7 
 call %MG_ROOT%\batch\compile.bat CenterModalWindow     /do %1 %2 %3 %4 %5 %6 %7 %8 %9
 
 IF NOT EXIST id-valid_hmg.exe goto :END
-IF NOT EXIST c:\upx-win32\upx.exe goto :END
+IF NOT EXIST %~d0\upx-win32\upx.exe goto :END
 
-IF EXIST c:\upx-win32\upx.exe c:\upx-win32\upx.exe -9 -q id_valid_hmg.exe -o id-valid.exe
+IF EXIST %~d0\upx-win32\upx.exe c:\upx-win32\upx.exe -9 -q id_valid_hmg.exe -o id-valid.exe
 
 IF EXIST eib.exe DEL id-valid_hmg.exe
 

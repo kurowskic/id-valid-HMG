@@ -3,17 +3,17 @@
 *-----------------------------------------------------------------------------*
 
 #DEFINE  _PRG1_      '2022'
-#DEFINE  _PRG2_      '154'
-#DEFINE  _PRG3_      '2'
+#DEFINE  _PRG2_      '158'
+#DEFINE  _PRG3_      '1'
 
 #DEFINE  _DB1_       '0000'
 #DEFINE  _DB2_       '00'
 #DEFINE  _DB3_       '0'
 
 
-#DEFINE  _OLD_PRG1_  '0000'
-#DEFINE  _OLD_PRG2_  '00'
-#DEFINE  _OLD_PRG3_  '0'
+#DEFINE  _OLD_PRG1_  '2022'
+#DEFINE  _OLD_PRG2_  '154'
+#DEFINE  _OLD_PRG3_  '2'
 
 #DEFINE  _OLD_DB1_   '0000'
 #DEFINE  _OLD_DB2_   '00'
